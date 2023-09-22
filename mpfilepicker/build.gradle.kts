@@ -21,7 +21,7 @@ extra.apply {
 
 @OptIn(ExperimentalKotlinGradlePluginApi::class)
 kotlin {
-    targetHierarchy.default()
+	targetHierarchy.default()
 	explicitApi()
 
 	androidTarget {
@@ -36,7 +36,11 @@ kotlin {
 		browser()
 		binaries.executable()
 	}
-	macosX64()
+	macosX64 {
+		binaries.framework {
+			baseName = "MPFilePicker"
+		}
+	}
 	listOf(
 		iosX64(),
 		iosArm64(),
@@ -105,8 +109,10 @@ kotlin {
 	publishing {
 		repositories {
 			maven {
-				val releaseRepo = URI("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
-				val snapshotRepo = URI("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+				val releaseRepo =
+					URI("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
+				val snapshotRepo =
+					URI("https://s01.oss.sonatype.org/content/repositories/snapshots/")
 				url = if (extra["isReleaseVersion"] == true) releaseRepo else snapshotRepo
 				credentials {
 					username = System.getenv("OSSRH_USERNAME") ?: "Unknown user"
