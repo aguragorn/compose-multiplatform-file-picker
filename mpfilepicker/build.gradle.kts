@@ -109,14 +109,11 @@ kotlin {
 	publishing {
 		repositories {
 			maven {
-				val releaseRepo =
-					URI("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
-				val snapshotRepo =
-					URI("https://s01.oss.sonatype.org/content/repositories/snapshots/")
-				url = if (extra["isReleaseVersion"] == true) releaseRepo else snapshotRepo
+				name = "GitHubPackages"
+				url = uri("https://maven.pkg.github.com/aguragorn/compose-multiplatform-file-picker")
 				credentials {
-					username = System.getenv("OSSRH_USERNAME") ?: "Unknown user"
-					password = System.getenv("OSSRH_PASSWORD") ?: "Unknown password"
+					username = System.getenv("GITHUB_ACTOR")
+					password = System.getenv("GITHUB_TOKEN")
 				}
 			}
 		}
