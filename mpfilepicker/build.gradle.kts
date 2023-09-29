@@ -1,5 +1,4 @@
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
-import java.net.URI
 
 plugins {
 	kotlin("multiplatform")

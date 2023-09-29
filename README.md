@@ -1,6 +1,6 @@
 # Compose Multiplatform File Picker
 
-![MIT License](https://img.shields.io/github/license/Wavesonics/compose-multiplatform-file-picker) ![Latest Release](https://img.shields.io/github/v/release/Wavesonics/compose-multiplatform-file-picker?include_prereleases)
+![MIT License](https://img.shields.io/github/license/Wavesonics/compose-multiplatform-file-picker) ![Latest Release](https://img.shields.io/github/v/release/aguragorn/compose-multiplatform-file-picker?include_prereleases)
 
 ![badge-platform-windows] ![badge-platform-linux] ![badge-platform-macos] ![badge-platform-android] ![badge-platform-js] ![badge-platform-macosX64]
 
@@ -11,7 +11,7 @@ A multiplatform compose widget for picking files with each platform's Native Fil
 ## Include in your project:
 
 ```kts
-implementation("com.darkrockstudios:mpfilepicker:2.1.0")
+implementation("com.darkrockstudios:mpfilepicker:2.2.0")
 ```
 
 ## How to use
