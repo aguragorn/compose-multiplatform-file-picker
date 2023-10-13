@@ -1,5 +1,5 @@
 PODS:
-  - ios (2.2.0)
+  - ios (2.3.0-alpha1)
 
 DEPENDENCIES:
   - ios (from `../ios`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../ios"
 
 SPEC CHECKSUMS:
-  ios: 7c664405ee17e390524f3a5dd9e088b85678dd0b
+  ios: 7a223e1028c8b17d330c99c887c9164c584e1286
 
 PODFILE CHECKSUM: d0f1a8cda67b334342153a01dcff5e0cb3dfeab9
 
